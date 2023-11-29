@@ -7,12 +7,6 @@
       "price": 15.99
     },
     {
-      "id": 2,
-      "name": "ZZ Plant",
-      "image": "./images/zz-plant.jpg",
-      "price": 25.98
-    },
-    {
       "id": 3,
       "name": "Pilea peperomioides",
       "image": "./images/pilea.jpg",
@@ -41,18 +35,6 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
-    },
-    {
-      "name": "Monstera Pretty",
-      "image": "https://cb.scene7.com/is/image/Crate/PottedMonstera24inSHS20/$web_pdp_main_carousel_med$/191217102319/faux-potted-monstera.jpg",
-      "price": "15",
-      "id": 8
-    },
-    {
-      "name": "Bursera Plant",
-      "image": "https://assets.weimgs.com/weimgs/ab/images/wcm/products/202340/0152/img37o.jpg",
-      "price": "40",
-      "id": 9
     }
   ]
 }

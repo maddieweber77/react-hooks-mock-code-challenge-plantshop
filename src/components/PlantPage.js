@@ -12,7 +12,7 @@ function PlantPage() {
     fetch('http://localhost:6001/plants')
     .then((r)=> r.json())
     .then((plantData) => setPlants(plantData))
-  }
+  },[]
   )
 
   function submitNewPlant(newPlant) {
@@ -25,6 +25,14 @@ function PlantPage() {
     setSearch(term)
   }
 
+
+function filterDeletePlant(deletedPlant) {
+  let plants =
+    plants.filter((plant) => plant.id !== deletedPlant.id);
+    return plants;
+}
+
+
   plants = plants.filter
   (plant => plant.name.toLowerCase().includes(searchTerm.toLowerCase()))
 
@@ -33,7 +41,7 @@ function PlantPage() {
     <main>
       <NewPlantForm plants={plants} submitNewPlant={submitNewPlant} searchTerm={searchTerm}/>
       <Search searchTerm={searchTerm} onSearch={onSearch}/>
-      <PlantList plants={plants} searchTerm={searchTerm}/>
+      <PlantList plants={plants} searchTerm={searchTerm} filterDeletePlant={filterDeletePlant}/>
     </main>
   );
 }

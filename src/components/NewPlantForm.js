@@ -7,19 +7,18 @@ function NewPlantForm({submitNewPlant}) {
 
   //learn this
   function NewPlantSubmit(e) {
-    e.preventDefault();
-    console.log({name, image, price})
-    let newPlant= {name, image, price}
-    
-    fetch('http://localhost:6001/plants', {
-      method: "POST",
-      headers: {
-        'Content-Type' : "Application/JSON"
-      },
-      body: JSON.stringify(newPlant)
-    })
-    .then((r)=> r.json())
-    .then((newplant) => submitNewPlant(newplant))
+   e.preventDefault();
+   let newPlant = {name, image, price}
+
+   fetch('http://localhost:6001/plants', {
+    method: "POST", 
+    headers: {
+      'Content-Type':"Application/JSON"
+    },
+    body:JSON.stringify(newPlant)
+   })
+   .then((r)=> r.json())
+   .then((newplant) => submitNewPlant(newplant))
   }
 
   
@@ -53,3 +52,5 @@ function NewPlantForm({submitNewPlant}) {
 }
 
 export default NewPlantForm;
+
+
